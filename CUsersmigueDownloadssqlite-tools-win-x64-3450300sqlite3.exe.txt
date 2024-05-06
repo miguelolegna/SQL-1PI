@@ -1,0 +1,40 @@
+SQLite version 3.45.3 2024-04-15 13:34:05 (UTF-16 console I/O)
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .open FILENAME
+sqlite> CREATE TABLE IF NOT EXISTS Alunos (
+(x1...>     ID INTEGER PRIMARY KEY,
+(x1...>     Nome TEXT,
+(x1...>     Idade INTEGER,
+(x1...>     turma INTEGER,
+(x1...>     Nota REAL
+(x1...> );
+sqlite> DELETE FROM Alunos;
+sqlite> INSERT INTO Alunos (Nome, Idade, turma, Nota) VALUES
+   ...> ('João', 17, 10, 8.5),
+   ...> ('Maria', 16, 11, 9.0),
+   ...> ('Pedro', 15, 9, 7.5),
+   ...> ('Ana', 14, 10, 8.0),
+   ...> ('Carlos', 18, 12, 9.5);
+sqlite> SELECT * FROM Alunos;
+1|João|17|10|8.5
+2|Maria|16|11|9.0
+3|Pedro|15|9|7.5
+4|Ana|14|10|8.0
+5|Carlos|18|12|9.5
+sqlite> SELECT Nome, Idade FROM Alunos WHERE Idade > 15;
+João|17
+Maria|16
+Carlos|18
+sqlite> SELECT * FROM Alunos;
+1|João|17|10|8.5
+2|Maria|16|11|9.0
+3|Pedro|15|9|7.5
+4|Ana|14|10|8.0
+5|Carlos|18|12|9.5
+sqlite> SELECT Nome, Idade FROM Alunos WHERE Idade > 15;
+João|17
+Maria|16
+Carlos|18
+sqlite>
